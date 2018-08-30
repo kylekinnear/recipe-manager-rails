@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'static/index'
   resources :ingredients
   resources :recipes
   resources :users
