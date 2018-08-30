@@ -36,10 +36,11 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :rating, :makes, :comments)
+    params.require(:recipe).permit(:name, :rating, :makes, :comments) #this may be wrong - how do we set strong param validations when we don't actually want to check what we're passing in?
   end
 
   def create_ingredient_items
+    #should this just be an items method we call?
   end
 
 end
