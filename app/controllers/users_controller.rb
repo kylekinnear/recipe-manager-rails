@@ -19,4 +19,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    if @user.update(user_params)
+      #redirect to user home with message
+    else
+      #redirect to edit
+    end
+  end
+
 end
