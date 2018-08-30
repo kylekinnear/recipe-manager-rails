@@ -1881,3 +1881,24 @@ Processing by StaticController#index as HTML
 Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/signin" for 127.0.0.1 at 2018-08-30 17:52:13 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2018-08-30 17:52:38 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2018-08-30 17:53:16 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+

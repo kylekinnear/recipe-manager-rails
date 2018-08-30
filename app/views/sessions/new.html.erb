@@ -1,11 +1,14 @@
 <h2>Please log in</h2>
 <%= form_for @user, url: '/signin' do |f| %>
+    <p>
     <%= f.label :name, "Your name:" %>
     <%= f.text_field :name %>
+    </p>
 
+    <p>
     <%= f.label :password, "Password:" %>
     <%= f.password_field :password, id: 'password' %>
-
+    </p>
     <%= f.submit "Sign in", class: "actions", id: 'Sign In' %>
 
 <%end%>
