@@ -3,9 +3,15 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   </p>
+  <p>
   <%= f.label "List recipe items" %>
-  <%= f.text_area :recipe_items %>
   <br>
+  e.g. 1 cup Milk
+  <br>
+  1 Egg
+  <br>
+  <%= f.text_area :recipe_items %>
+  </p>
   <p>
   <%= f.label :rating %>
   <%= f.number_field :rating %>
