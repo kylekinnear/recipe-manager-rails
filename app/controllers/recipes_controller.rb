@@ -27,5 +27,19 @@ class RecipesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  private
+
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :rating, :makes, :comments)
+  end
+
+  def create_ingredient_items
+  end
 
 end
