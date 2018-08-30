@@ -33,9 +33,12 @@ ActiveRecord::Schema.define(version: 2018_08_30_150755) do
     t.string "name"
     t.integer "rating"
     t.integer "makes"
-    t.string "comments"
+    t.text "comments"
+    t.text "recipe_items"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

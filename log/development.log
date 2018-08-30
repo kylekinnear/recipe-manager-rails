@@ -2467,3 +2467,353 @@ Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
   ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+Started GET "/" for 127.0.0.1 at 2018-08-30 18:12:10 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 106ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-30 18:12:12 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 39ms (Views: 24.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-30 18:12:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUgeiR8F9lzAf9GiQNm5pkqTfrC2VjRyc1146Yay0hWAeOk8IYWcFfeIcuai3nq9n/eAgE2AWk8SnEexpth69g==", "user"=>{"name"=>"Asd", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Asd"], ["password_digest", "$2a$10$s8NTezN00.khyGtfG1Vlu.cRpy1BUAbj9qPSQ5BUX3BI0K4ooUSDO"], ["created_at", "2018-08-30 22:12:17.432233"], ["updated_at", "2018-08-30 22:12:17.432233"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 58ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-30 18:12:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 18:12:19 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (10.4ms)
+  Rendered recipes/new.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_items' for #<Recipe:0x007f4016800fb8>):
+    3:   <%= f.text_field :name %>
+    4:   <br>
+    5:   <%= f.label :recipe_items %>
+    6:   <%= f.text_area :recipe_items %>
+    7:   <br>
+    8:   <%= f.label :rating %>
+    9:   <%= f.number_field :rating %>
+  
+app/views/recipes/_form.html.erb:6:in `block in _app_views_recipes__form_html_erb__3489340878355040032_69956614002880'
+app/views/recipes/_form.html.erb:1:in `_app_views_recipes__form_html_erb__3489340878355040032_69956614002880'
+app/views/recipes/new.html.erb:3:in `_app_views_recipes_new_html_erb___1085593258386439297_69956614328580'
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 18:13:03 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (22.6ms)
+  Rendered recipes/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 18:13:17 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (2.0ms)
+  Rendered recipes/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 18:14:22 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (1.6ms)
+  Rendered recipes/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 18:14:39 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (1.7ms)
+  Rendered recipes/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 18:15:06 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (1.9ms)
+  Rendered recipes/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    4:   <%= f.text_field :name %>
+    5:   </p>
+    6:   <%= f.label "List recipe items" %>
+    7:   <%= f.text_area %>
+    8:   <br>
+    9:   <p>
+   10:   <%= f.label :rating %>
+  
+app/views/recipes/_form.html.erb:7:in `block in _app_views_recipes__form_html_erb__3489340878355040032_69956615540580'
+app/views/recipes/_form.html.erb:1:in `_app_views_recipes__form_html_erb__3489340878355040032_69956615540580'
+app/views/recipes/new.html.erb:3:in `_app_views_recipes_new_html_erb___1085593258386439297_69956615536580'
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 18:15:14 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (6.1ms)
+  Rendered recipes/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_items' for #<Recipe:0x007f4018460578>):
+    4:   <%= f.text_field :name %>
+    5:   </p>
+    6:   <%= f.label "List recipe items" %>
+    7:   <%= f.text_area :recipe_items %>
+    8:   <br>
+    9:   <p>
+   10:   <%= f.label :rating %>
+  
+app/views/recipes/_form.html.erb:7:in `block in _app_views_recipes__form_html_erb__3489340878355040032_69956630959220'
+app/views/recipes/_form.html.erb:1:in `_app_views_recipes__form_html_erb__3489340878355040032_69956630959220'
+app/views/recipes/new.html.erb:3:in `_app_views_recipes_new_html_erb___1085593258386439297_69956604816920'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "items"[0m
+  ↳ db/schema.rb:21
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "quantity" integer, "unit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:21
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX "index_items_on_ingredient_id" ON "items" ("ingredient_id")[0m
+  ↳ db/schema.rb:21
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX "index_items_on_recipe_id" ON "items" ("recipe_id")[0m
+  ↳ db/schema.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  ↳ db/schema.rb:32
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" integer, "makes" integer, "comments" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180830150755)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180830123221),
+(20180830123112),
+(20180817060930);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-30 22:15:59.643115"], ["updated_at", "2018-08-30 22:15:59.643115"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "items"[0m
+  ↳ db/schema.rb:21
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "quantity" integer, "unit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:21
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE  INDEX "index_items_on_ingredient_id" ON "items" ("ingredient_id")[0m
+  ↳ db/schema.rb:21
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX "index_items_on_recipe_id" ON "items" ("recipe_id")[0m
+  ↳ db/schema.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  ↳ db/schema.rb:32
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" integer, "makes" integer, "comments" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:41
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:41
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180830150755)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180830123221),
+(20180830123112),
+(20180817060930);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-30 22:15:59.709897"], ["updated_at", "2018-08-30 22:15:59.709897"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Update (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-08-30 22:15:59.715839"], ["key", "environment"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+Migrating to CreateUsers (20180817060930)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180817060930_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817060930"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+Migrating to CreateRecipes (20180830123112)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" integer, "makes" integer, "comments" text, "recipe_items" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_9606fce865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180830123112_create_recipes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_recipes_on_user_id" ON "recipes" ("user_id")[0m
+  ↳ db/migrate/20180830123112_create_recipes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180830123112"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+Migrating to CreateIngredients (20180830123221)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180830123221_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180830123221"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+Migrating to CreateItems (20180830150755)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "quantity" integer, "unit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_4f7ef604e4"
+FOREIGN KEY ("ingredient_id")
+  REFERENCES "ingredients" ("id")
+, CONSTRAINT "fk_rails_bb44f47941"
+FOREIGN KEY ("recipe_id")
+  REFERENCES "recipes" ("id")
+)[0m
+  ↳ db/migrate/20180830150755_create_items.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_items_on_ingredient_id" ON "items" ("ingredient_id")[0m
+  ↳ db/migrate/20180830150755_create_items.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_items_on_recipe_id" ON "items" ("recipe_id")[0m
+  ↳ db/migrate/20180830150755_create_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180830150755"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-30 22:17:07.781862"], ["updated_at", "2018-08-30 22:17:07.781862"]]
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/bin/rake:22

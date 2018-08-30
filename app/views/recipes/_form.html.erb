@@ -1,18 +1,22 @@
 <%= form_for @recipe do |f| %>
+  <p>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <br>
-  <%= f.label :recipe_items %>
+  </p>
+  <%= f.label "List recipe items" %>
   <%= f.text_area :recipe_items %>
   <br>
+  <p>
   <%= f.label :rating %>
   <%= f.number_field :rating %>
-  <br>
-  <%= f.label 'Times made:', :makes %>
+  </p>
+  <p>
+  <%= f.label 'Times made' %>
   <%= f.number_field :makes %>
-  <br>
+  </p>
+  <p>
   <%= f.label :comments %>
   <%= f.text_area :comments %>
-  <br>
+  </p>
   <%= f.submit %>
 <%end%>
