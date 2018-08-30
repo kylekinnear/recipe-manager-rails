@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'static#index'
+  
   resources :ingredients
   resources :recipes
   resources :users
