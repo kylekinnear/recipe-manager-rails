@@ -3,7 +3,16 @@
   <%= f.text_field :name %>
   <br>
   <%= f.label :recipe_items %>
-  <%= f.textarea :recipe_items %>
+  <%= f.text_area :recipe_items %>
+  <br>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <br>
+  <%= f.label 'Times made:', :makes %>
+  <%= f.number_field :makes %>
+  <br>
+  <%= f.label :comments %>
+  <%= f.text_area :comments %>
   <br>
   <%= f.submit %>
 <%end%>

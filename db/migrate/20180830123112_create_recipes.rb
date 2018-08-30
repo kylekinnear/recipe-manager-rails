@@ -4,7 +4,8 @@ class CreateRecipes < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :rating
       t.integer :makes
-      t.string :comments
+      t.text :comments
+      t.text :recipe_items
 
       t.belongs_to :user, foreign_key: true
 
