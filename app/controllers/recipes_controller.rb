@@ -16,6 +16,13 @@ class RecipesController < ApplicationController
 
   def create
     #we need to create the recipe by converting the textarea param into a set of items, which we create and use to associate or create ingredients
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.save
+      #create items
+      redirect_to @recipe, notice: 'Successfully added the recipe'
+    else
+      render :new
+    end
   end
 
   def edit
@@ -36,7 +43,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :rating, :makes, :comments) #this may be wrong - how do we set strong param validations when we don't actually want to check what we're passing in?
+    params.require(:recipe).permit(:name, :rating, :makes, :comments, :recipe_items) #this may be wrong - how do we set strong param validations when we don't actually want to check what we're passing in?
   end
 
   def create_ingredient_items
