@@ -13,17 +13,17 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      #redirect
+      redirect_to user_path(@user)
     else
-      #redirect
+      render :new
     end
   end
 
   def update
     if @user.update(user_params)
-      #redirect to user home with message
+      redirect_to user_path(@user), notice: "User updated."
     else
-      #redirect to edit
+      render :new, notice: "Update failed, check inputs."
     end
   end
 
