@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message%></p>
+  </div>
+<%end%>
+
+<h2><%= @user.name + "'s Recipes" if @user %></h2>
+<h2><%= "Recipe Index" if !@user %></h2>
+
+<table>
+  <tr>
+    <th>Recipe</th>
+    <th>Serves</th>
+    <th>Ingredient</th>
+    <th>Ingredient</th>
+    <th>Ingredient</th>
+    <th>Ingredient</th>
+    <th>Ingredient</th>
+    <th>Rating</th>
+    <th>Times Made</th>
+  </tr>
+  <% @recipes.each do |recipe| %>
+  <tr>
+    <td><%= recipe.name %></td>
+    <td><%= recipe.serves %></td>
+    <% recipe.items.each do |item| %>
+    <td><%= item.output %></td>
+    <%end%>
+    <td><%= recipe.rating %></td>
+    <td><%= recipe.makes %></td>
+  </tr>
+  <%end%>
+</table>
