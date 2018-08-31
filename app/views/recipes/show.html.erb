@@ -1,1 +1,22 @@
-<h2>this is a recipe show page</h2>
+<h2><%= @recipe.name %></h2>
+
+<p>Serves <%= @recipe.serves %></p>
+
+<p><b>Ingredients:</b></p>
+  <ul>
+    <% @recipe.items.each do |item| %>
+      <li>
+        item.output
+      </li>
+    <%end%>
+  </ul>
+
+<p>Your rating: <%= @recipe.rating %></p>
+<p>You've made this <%= @recipe.makes %> time(s)</p>
+
+<p><i>Your notes:</i>
+<%= @recipe.comments %></p>
+
+<p><%= link_to 'Your home', user_path(current_user) %></p>
+<p><%= link_to 'Edit', edit_recipe_path(@recipe) %></p>
+<p><%= link_to 'Log out', signout_path, :method => :delete %></p>
