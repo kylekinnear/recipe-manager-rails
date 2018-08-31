@@ -1,3 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message%></p>
+  </div>
+<%end%>
+
 <h1>Welcome to Recipe Manager</h1>
 
 <p><b><%= link_to "Sign in", signin_path %></b></p>
