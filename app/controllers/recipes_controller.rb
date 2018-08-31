@@ -5,7 +5,11 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.all
+    if params[:user_id]
+      @recipes = User.find(params[:user_id]).recipes
+    else
+      @recipes = Recipe.all
+    end
   end
 
   def show
