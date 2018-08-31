@@ -3125,3 +3125,63 @@ Processing by RecipesController#show as HTML
 Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/recipes/6/edit" for 127.0.0.1 at 2018-08-30 23:01:39 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:49
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  ↳ app/views/recipes/_form.html.erb:7
+  Rendered recipes/_form.html.erb (19.4ms)
+  Rendered recipes/edit.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/6" for 127.0.0.1 at 2018-08-30 23:01:40 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mk6xKnbvrwLC0iOb2ahUzj6drp3f525CI4RrAeptBkrDh4xlb2c9gW6McX65/TT4J9ysazNCB9VhFujSn0SMaA==", "recipe"=>{"name"=>"431", "items_attributes"=>{"0"=>{"quantity"=>"254", "unit"=>"aws", "ingredient_name"=>"edf", "id"=>"26"}, "1"=>{"quantity"=>"1214", "unit"=>"fds", "ingredient_name"=>"gfddsd", "id"=>"27"}, "2"=>{"quantity"=>"12", "unit"=>"re", "ingredient_name"=>"asd", "id"=>"28"}, "3"=>{"quantity"=>"123", "unit"=>"ga", "ingredient_name"=>"bas", "id"=>"29"}, "4"=>{"quantity"=>"4", "unit"=>"asd", "ingredient_name"=>"wqd", "id"=>"30"}}, "rating"=>"4", "makes"=>"1", "serves"=>"23", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:39
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ? AND "items"."id" IN (?, ?, ?, ?, ?)[0m  [["recipe_id", 6], ["id", 26], ["id", 27], ["id", 28], ["id", 29], ["id", 30]]
+  ↳ app/controllers/recipes_controller.rb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:39
+Redirected to http://localhost:3000/recipes/6
+Completed 302 Found in 21ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/6" for 127.0.0.1 at 2018-08-30 23:01:41 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:49
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  ↳ app/views/recipes/show.html.erb:7
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-30 23:01:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
