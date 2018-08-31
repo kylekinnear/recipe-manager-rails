@@ -16,3 +16,1102 @@ Processing by RecipesController#new as HTML
 Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-30 20:11:10 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 115ms (Views: 110.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2018-08-30 20:11:12 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 29ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-30 20:11:14 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-30 20:11:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8TL/1jpYk8B93uPAvqH5Y7ZyRtHbf+nr3+YHJCjxahg54IyFCBbGq4OcU8PNTS9o9rBJQygUFgrN2iGJpMWBpg==", "user"=>{"name"=>"Asd", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Asd"], ["password_digest", "$2a$10$Xi8s/f1bjw9xo3Wcn8W2HuVJnASeqLT0/sETTZi/QbBeaxAhmoLj6"], ["created_at", "2018-08-31 00:11:17.675035"], ["updated_at", "2018-08-31 00:11:17.675035"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 67ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-30 20:11:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 20:11:19 -0400
+  
+SyntaxError (/home/kyle/code/projects/recipe-manager-rails/app/controllers/recipes_controller.rb:26: syntax error, unexpected keyword_else, expecting keyword_end
+/home/kyle/code/projects/recipe-manager-rails/app/controllers/recipes_controller.rb:52: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/recipes_controller.rb:26: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/recipes_controller.rb:52: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 20:11:37 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (6.4ms)
+  Rendered recipes/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 67ms (Views: 26.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 20:11:49 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (6.3ms)
+  Rendered recipes/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 20:12:31 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slnfXXY4jTWO/YHzpxNTz6yfH4Tz61B5Zc5flixm8CYnusaw4O8wKQdmRsnhUxyUWZH7AJ+Wt+sOZw+Fg/ZJew==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recipes_controller.rb:20
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (6.5ms)
+  Rendered recipes/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 41ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2018-08-30 20:13:10 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:46
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=1):
+  
+app/controllers/recipes_controller.rb:46:in `set_recipe'
+Started GET "/recipes" for 127.0.0.1 at 2018-08-30 20:13:13 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UnknownFormat (RecipesController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 20:14:00 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slnfXXY4jTWO/YHzpxNTz6yfH4Tz61B5Zc5flixm8CYnusaw4O8wKQdmRsnhUxyUWZH7AJ+Wt+sOZw+Fg/ZJew==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recipes_controller.rb:20
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (5.4ms)
+  Rendered recipes/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 59ms (Views: 25.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 20:14:42 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8GOPI4Wwq1URDN6450jpPpbVPu9xbrLLS/lZuexpmlplgJbOE2cWSZiXGYKhCKZlY9vaax0TVVkgUAmqQ/kjBw==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/recipes_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recipes_controller.rb:23
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (6.1ms)
+  Rendered recipes/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 568193ms (Views: 27.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 20:25:46 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 119ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2018-08-30 20:25:50 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2018-08-30 20:25:52 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LzZdK/N6LZBKAg1zOkYomEMulHbPPpFiZqwvNl29LyCDBfPsqwX8sLX+NogL0EOISlYLmkTc+8dY3AqGE5WSVQ==", "user"=>{"name"=>"Asd", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Asd"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 63ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-30 20:25:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 20:25:54 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (19.8ms)
+  Rendered recipes/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 86ms (Views: 48.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 20:26:10 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3xjIjb1g6m+jhWuVaVa/GQ0it0J1lQ0uV/XsGuxItQ/+5gC1mGQYUfxdZkXnL6IcyDjCFbcTC1EihtgWXet/KA==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"4", "makes"=>"2", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recipes_controller.rb:23
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (16.2ms)
+  Rendered recipes/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 53ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 20:26:50 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rtonvAYDUqiQZpXN0DQeigrXKwTab76pvo0LyserJfZhejMEYC14HQsm163RaFrLu+JLyTQADbigx1KbsiHRrA==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"4", "makes"=>"2", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recipes_controller.rb:24
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (6.2ms)
+  Rendered recipes/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 656564ms (Views: 24.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 20:38:05 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGtYR02D9Kc1fYWJqS8ZiK7sNqziFuWgXIAfsjiQjHBTy0z/K63eEq49x+moc13JH9lWYQx5VrFCykbjTRp4Kg==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"4", "makes"=>"2", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):15
+Unpermitted parameters: :quantity, :unit, :ingredient_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recipes_controller.rb:24
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (5.6ms)
+  Rendered recipes/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 2100524ms (Views: 19.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 21:13:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (13.2ms)
+  Rendered recipes/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 153ms (Views: 120.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 21:13:41 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TbiHItRLU2u0992Y7S4Pvierl+LhjO87npE4NfoaxAWCGJOasmV53i+3n/jsckv/lp73Lw/jXCqA22Fkj5AwXw==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"4", "makes"=>"2", "comments"=>"ads"}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):3
+No template found for RecipesController#create, rendering head :no_content
+Completed 204 No Content in 165864ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:17:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 141ms (Views: 125.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2018-08-30 21:17:06 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2018-08-30 21:17:11 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yAO+vsTrYW874fv7wacmucpKX5a/Sss9gEuzJomnSk9kMBB5nJSwT8QdwADwMU2pwzLAejSooZi+O5aWx4/3Og==", "user"=>{"name"=>"Asd", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Asd"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 52ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-30 21:17:11 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 21:17:13 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (7.5ms)
+  Rendered recipes/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 55ms (Views: 26.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 21:17:28 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/wXTsaKpyPIFRHl1p1fDaP6I0/DgdwMWhjFmv0NTDK7e+xuJh606zFqcdKUpLt5tO5KmpyLxBWnzQlKz8vDGiQ==", "recipe"=>{"name"=>"Fried Eggs", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (pry):5
+  [1m[36mRecipe Create (1.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "comments", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Fried Eggs"], ["comments", ""], ["user_id", 1], ["created_at", "2018-08-31 01:19:07.295767"], ["updated_at", "2018-08-31 01:19:07.295767"]]
+  ↳ (pry):5
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["quantity", "2"], ["unit", ""], ["ingredient_name", "Eggs"], ["created_at", "2018-08-31 01:19:07.298947"], ["updated_at", "2018-08-31 01:19:07.298947"]]
+  ↳ (pry):5
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["quantity", "1"], ["unit", "slice"], ["ingredient_name", "butter"], ["created_at", "2018-08-31 01:19:07.300280"], ["updated_at", "2018-08-31 01:19:07.300280"]]
+  ↳ (pry):5
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-08-31 01:19:07.301613"], ["updated_at", "2018-08-31 01:19:07.301613"]]
+  ↳ (pry):5
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-08-31 01:19:07.302707"], ["updated_at", "2018-08-31 01:19:07.302707"]]
+  ↳ (pry):5
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-08-31 01:19:07.303652"], ["updated_at", "2018-08-31 01:19:07.303652"]]
+  ↳ (pry):5
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):5
+No template found for RecipesController#create, rendering head :no_content
+Completed 204 No Content in 104546ms (ActiveRecord: 4.4ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VFb6VppXNo5vT+ZwUnKfJc/wY7k2iCRDua8g/eM0+beb9u7u/HkcO/QPpBBTLttkfsUDdNjnl1Kn5Xmslr4N7Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:33 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:36 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:36 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:36 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:37 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:20:42 -0400
+Processing by StaticController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2018-08-30 21:20:44 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 117ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin" for 127.0.0.1 at 2018-08-30 21:20:49 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qvorfJN1LELhN8e5DQg5z9KTutIGrZhfLYZsiFW7NE9lWj/E9VsG93p3hdkMVH2OY6baH+jCK04zzDXZIDHAFQ==", "user"=>{"name"=>"Asd", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Asd"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 52ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-08-30 21:20:49 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-08-30 21:20:50 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (18.3ms)
+  Rendered recipes/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 98ms (Views: 58.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-08-30 21:21:03 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lyMiJ5phtRvxeyBfI7npY/06lwRfaiibJ1rGrjGe7AO23eofv2VHJa6jLY+twPRmOCDiU53sLuRSKfKigD0mJA==", "recipe"=>{"name"=>"Fried Egg", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[36mRecipe Create (1.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "comments", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Fried Egg"], ["comments", ""], ["user_id", 1], ["created_at", "2018-08-31 01:21:03.626839"], ["updated_at", "2018-08-31 01:21:03.626839"]]
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 2], ["quantity", "2"], ["unit", ""], ["ingredient_name", "eggs"], ["created_at", "2018-08-31 01:21:03.630351"], ["updated_at", "2018-08-31 01:21:03.630351"]]
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 2], ["quantity", "1"], ["unit", "slice"], ["ingredient_name", "butter"], ["created_at", "2018-08-31 01:21:03.632542"], ["updated_at", "2018-08-31 01:21:03.632542"]]
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 2], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-08-31 01:21:03.635483"], ["updated_at", "2018-08-31 01:21:03.635483"]]
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 2], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-08-31 01:21:03.638117"], ["updated_at", "2018-08-31 01:21:03.638117"]]
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 2], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-08-31 01:21:03.643094"], ["updated_at", "2018-08-31 01:21:03.643094"]]
+  ↳ app/controllers/recipes_controller.rb:23
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:23
+Redirected to http://localhost:3000/recipes/2
+Completed 302 Found in 44ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2018-08-30 21:21:03 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:49
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2018-08-30 21:21:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/items/1"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'

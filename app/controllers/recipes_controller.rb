@@ -1,3 +1,6 @@
+require 'pry'
+require 'active_support/inflector'
+
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
@@ -16,13 +19,17 @@ class RecipesController < ApplicationController
   end
 
   def create
-    #we need to create the recipe by converting the textarea param into a set of items, which we create and use to associate or create ingredients
     @recipe = Recipe.new(recipe_params)
+    @recipe.user_id = current_user.id
     if @recipe.save
-  #    @recipe.build_recipe_items
-      redirect_to @recipe, notice: 'Successfully added the recipe'
+      @recipe.items.each do |item|
+        if item.ingredient_name
+          item.ingredient = Ingredient.find_or_create_by(name: item.ingredient_name.downcase.singularize)
+        end
+      end
+      redirect_to recipe_path(@recipe), notice: 'Successfully added the recipe'
     else
-      render :new
+      render :new, notice: 'Unable to create recipe. Check inputs'
     end
   end
 
@@ -44,7 +51,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :rating, :makes, :comments, :recipe_items) #this may be wrong - how do we set strong param validations when we don't actually want to check what we're passing in?
+    params.require(:recipe).permit(:name, :rating, :makes, :comments, items_attributes: [:id, :quantity, :unit, :ingredient_name])
   end
 
 end
