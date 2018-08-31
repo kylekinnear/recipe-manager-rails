@@ -21,12 +21,11 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
+    @recipe.items.each do |item|
+      item.find_or_create_ingredient
+    end
+#    binding.pry
     if @recipe.save
-      @recipe.items.each do |item|
-        if item.ingredient_name
-          item.ingredient = Ingredient.find_or_create_by(name: item.ingredient_name.downcase.singularize)
-        end
-      end
       redirect_to recipe_path(@recipe), notice: 'Successfully added the recipe'
     else
       render :new, notice: 'Unable to create recipe. Check inputs'
@@ -51,7 +50,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :rating, :makes, :comments, items_attributes: [:id, :quantity, :unit, :ingredient_name])
+    params.require(:recipe).permit(:name, :rating, :makes, :comments, :serves, items_attributes: [:id, :quantity, :unit, :ingredient_name])
   end
 
 end
