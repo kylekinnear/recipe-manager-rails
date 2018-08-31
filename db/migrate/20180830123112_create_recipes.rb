@@ -5,6 +5,7 @@ class CreateRecipes < ActiveRecord::Migration[5.2]
       t.integer :rating
       t.integer :makes
       t.text :comments
+      t.integer :serves
 
       t.belongs_to :user, foreign_key: true
 

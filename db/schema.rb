@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2018_08_30_150755) do
     t.integer "rating"
     t.integer "makes"
     t.text "comments"
-    t.text "recipe_items"
+    t.integer "serves"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
