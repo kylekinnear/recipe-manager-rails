@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 2018_08_30_150755) do
   create_table "items", force: :cascade do |t|
     t.integer "ingredient_id"
     t.integer "recipe_id"
-    t.integer "quantity"
+    t.string "quantity"
     t.string "unit"
+    t.string "ingredient_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ingredient_id"], name: "index_items_on_ingredient_id"

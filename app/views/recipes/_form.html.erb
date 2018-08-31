@@ -1,5 +1,3 @@
-<h2>Add a recipe</h2>
-
 <%= form_for @recipe do |f| %>
   <p>
   <%= f.label :name %>
@@ -7,7 +5,7 @@
   </p>
   <br>
   <p>Recipe Items:</p>
-  <%= f.fields_for :recipe_items do |i| %>
+  <%= f.fields_for :items do |i| %>
     <li>
       <%= i.label :quantity %>
       <%= i.text_field :quantity %>
@@ -15,8 +13,8 @@
       <%= i.label :unit %>
       <%= i.text_field :unit %>
 
-      <%= i.label :ingredient %>
-      <%= i.text_field :ingredient %>
+      <%= i.label "Ingredient" %>
+      <%= i.text_field :ingredient_name %>
     </li>
   <%end%>
 
