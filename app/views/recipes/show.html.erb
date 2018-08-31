@@ -6,7 +6,7 @@
   <ul>
     <% @recipe.items.each do |item| %>
       <li>
-        item.output
+        <%= item.output %>
       </li>
     <%end%>
   </ul>
@@ -17,6 +17,7 @@
 <p><i>Your notes:</i>
 <%= @recipe.comments %></p>
 
+
+<p><%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %></p>
 <p><%= link_to 'Your home', user_path(current_user) %></p>
-<p><%= link_to 'Edit', edit_recipe_path(@recipe) %></p>
 <p><%= link_to 'Log out', signout_path, :method => :delete %></p>
