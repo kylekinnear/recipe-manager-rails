@@ -56,15 +56,10 @@ class RecipesController < ApplicationController
   end
 
   def update
-    if params[:name] != nil
-      if @recipe.update(recipe_params)
-        redirect_to recipe_path(@recipe), notice: 'Recipe was successfully updated.'
-      else
-        flash.now[:notice] = 'Unable to edit recipe. Check inputs'
-        render :edit
-      end
+    if @recipe.update(recipe_params)
+      redirect_to recipe_path(@recipe), notice: 'Recipe was successfully updated.'
     else
-      flash.now[:notice] = 'Unable to edit recipe. Recipes need names'
+      flash.now[:notice] = 'Unable to edit recipe. Check inputs'
       render :edit
     end
   end

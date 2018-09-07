@@ -9768,3 +9768,257 @@ Processing by RecipesController#update as HTML
 Completed 200 OK in 64ms (Views: 43.0ms | ActiveRecord: 2.1ms)
 
 
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:56:42 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N9KTvuMbyB8dWKkdVuBy2DeKSk3VCoHNaH3cgmJ1ZuRBBzROrrlaWJ6qc+xkyGBI1KtqPb0S1WNNyd2mrN+/cA==", "recipe"=>{"name"=>"Lemonade", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (21.0ms)
+  Rendered recipes/edit.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 66ms (Views: 45.2ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:56:43 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A8stXx5tSVsgsrU1EhegdUeFyN8ysbKgyalH2ftgBjV1HoqvU8/bHKNAb8QgP7LlpKTor1qp5g7sHUb9NcrfoQ==", "recipe"=>{"name"=>"Lemonade", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (10.4ms)
+  Rendered recipes/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:56:50 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ySxRi9BSA5q9F2GCyIHxIMWsHY8rh3KE4lhR4Z9gQHi/+fZ7nfCR3T7lu3P6qeOwJo09/0OfJirH7FDFUcqZ7A==", "recipe"=>{"name"=>"Lemonad", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (16.7ms)
+  Rendered recipes/edit.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:56:51 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdJa1GpQctbrGae1z8y4K1unNT7NVvRbJmkpysUtsEf7B/0kJ/LgkWjrfUT95Kq7uIYVTqVOoPUD3SjuC4dp0w==", "recipe"=>{"name"=>"Lemonade", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (10.6ms)
+  Rendered recipes/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:56:52 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mxu2l3iMuvK5vgua09KYRNFJdyfqGjDg7Q7E5/arFKjtzhFnNS4otTpM0Wvh+orUMmhXV4ICZE7IusXDOAHNPA==", "recipe"=>{"name"=>"Lemonade", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (21.7ms)
+  Rendered recipes/edit.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:57:04 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7bn8QcpVp94YpF40cUf/h3kl7T8dmWnPo9ZPHkgEUfGbbFuxh/c1mZtWhMVDb+0XmgTNT3WBPWGGYk46hq6IZQ==", "recipe"=>{"name"=>"Drink", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (5.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (19.6ms)
+  Rendered recipes/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 55ms (Views: 47.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/recipes/8" for 127.0.0.1 at 2018-09-07 05:57:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/8/edit" for 127.0.0.1 at 2018-09-07 05:57:16 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (12.9ms)
+  Rendered recipes/edit.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:57:20 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O4ckKNWQDT0PThG4VRiqihH8iul6D3C1Ho+ATc5XufY6Jv1KJErCkwEFwQs8ULqeV0DbxH652cfC+1In1uS+ig==", "recipe"=>{"name"=>"Lemonade Drink", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:80
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (11.6ms)
+  Rendered recipes/edit.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:57:37 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/Ro0iUBuHfYYe3yW6wD3iweh1QDuL7/O+Pw8R4w29KpIc8iaKMqMFuTNwNphBFOzz+nJGug6lEeV/HV0JoCRg==", "recipe"=>{"name"=>"Lemonade", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:81
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (18.2ms)
+  Rendered recipes/edit.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 20707ms (Views: 37.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-07 05:58:07 -0400
+Processing by StaticController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-09-07 05:58:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:10
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/recipes" for 127.0.0.1 at 2018-09-07 05:58:09 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/recipes/index.html.erb:24
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 7]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/index.html.erb:28
+  Rendered recipes/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/8" for 127.0.0.1 at 2018-09-07 05:58:10 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:81
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/8/edit" for 127.0.0.1 at 2018-09-07 05:58:11 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:81
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (22.1ms)
+  Rendered recipes/edit.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 05:58:16 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BN/EKgn0sqnrwaRuPEicbzLqDQ3gXlx0nFXTaLn+gf4Ffh1I+C59B+WKdN1VAIx7dFZcIOTo9QZAIQECoU2Ggg==", "recipe"=>{"name"=>"Lemonade Drink", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:81
+Unpermitted parameters: :items_attributes, :rating, :makes, :serves, :comments
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (9.8ms)
+  Rendered recipes/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 196667ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/8" for 127.0.0.1 at 2018-09-07 06:01:42 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4UVKZtg/ty2+b0Y9XBhU52MQ/ET50KIzujGKqJ33+cGXkO2WlZ0laj2dnMxuMEZ3gDHcNJHI9p2fhYuMU10gVQ==", "recipe"=>{"name"=>"", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Lemons", "id"=>"36"}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"37"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"38"}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"39"}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>"", "id"=>"40"}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Update Recipe", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:81
+Unpermitted parameters: :items_attributes, :rating, :makes, :serves, :comments
+  Rendering recipes/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  ↳ app/views/recipes/_form.html.erb:15
+  Rendered recipes/_form.html.erb (9.8ms)
+  Rendered recipes/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 115324ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
