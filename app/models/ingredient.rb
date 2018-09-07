@@ -5,9 +5,11 @@ class Ingredient < ApplicationRecord
   def self.most_used
     ranker = {}
     self.all.each do |i|
-      ranker.store(i, i.recipes.size)
+      if i.name != ""
+        ranker.store(i, i.recipes.size)
+      end
     end
-    ranker.max_by{|k,v|, v}[0]
+    ranker.max_by{|k,v| v}[0]
   end
 
 end
