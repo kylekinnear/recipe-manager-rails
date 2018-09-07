@@ -25,25 +25,14 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    if @recipe.has_name?
-      @recipe.user_id = current_user.id
-      if @recipe.items.first.has_ingredient_name? #recipes need at least 1 ingredient
-        @recipe.items.each do |item|
-          if item.is_valid_or_blank?
-            item.find_or_create_ingredient
-          else
-            flash.now[:notice] = 'Unable to create recipe - ingredient items need a quantity and an ingredient'
-            render :new and return
-          end
-        end
+    @recipe.user_id = current_user.id
+    @recipe.items.each do |item|
+      if item.valid?
+        item.find_or_create_ingredient
       else
-        flash.now[:notice] = 'Unable to create recipe - make sure to include at least one ingredient'
+        flash.now[:notice] = 'Unable to create recipe - ingredient items need a quantity and an ingredient'
         render :new and return
       end
-    else
-      flash.now[:notice] = 'Unable to create recipe - needs a name'
-      render :new and return
-    end
     if @recipe.save
       redirect_to recipe_path(@recipe), notice: 'Successfully added the recipe'
     else
