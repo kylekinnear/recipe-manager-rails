@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static#index'
+  root 'static#home'
 
   resources :users do
     resources :recipes, only: [:show, :index]

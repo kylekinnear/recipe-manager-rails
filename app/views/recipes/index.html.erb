@@ -23,7 +23,7 @@
   </tr>
   <% @recipes.each do |recipe| %>
   <tr>
-    <td><%= recipe.name %></td>
+    <td><%= link_to recipe.name, recipe_path(recipe) %></td>
     <td><%= recipe.serves %></td>
     <% recipe.items.each do |item| %>
     <td><%= item.output %></td>
