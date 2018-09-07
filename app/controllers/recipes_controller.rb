@@ -40,6 +40,7 @@ class RecipesController < ApplicationController
       end
     else
       render :new, notice: 'Unable to create recipe - needs a name' and return
+    end
 #    binding.pry
     if @recipe.save
       redirect_to recipe_path(@recipe), notice: 'Successfully added the recipe'
