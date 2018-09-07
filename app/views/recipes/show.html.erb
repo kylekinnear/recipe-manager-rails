@@ -27,5 +27,6 @@
 
 
 <p><%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %></p>
+<p><%= link_to 'Delete this recipe', recipe_path(@recipe), :method => :delete %></p>
 <p><%= link_to "Return to home page", root_path %></p>
 <p><%= link_to 'Log out', signout_path, :method => :delete %></p>

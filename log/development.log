@@ -8409,3 +8409,310 @@ Processing by IngredientsController#show as HTML
 Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:18:05 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 47ms (Views: 42.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:18:38 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:18:40 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:18:42 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:18:56 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"ingredients", :id=>nil}, missing required keys: [:id]):
+    14:   <ul>
+    15:     <% @recipe.items.each do |item| %>
+    16:       <li>
+    17:         <%= link_to item.output, ingredient_path(item.ingredient) %>
+    18:       </li>
+    19:     <%end%>
+    20:   </ul>
+  
+app/views/recipes/show.html.erb:17:in `block in _app_views_recipes_show_html_erb___24606129236208922_69958748988160'
+app/views/recipes/show.html.erb:15:in `_app_views_recipes_show_html_erb___24606129236208922_69958748988160'
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:19:20 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:   <ul>
+    15:     <% @recipe.items.each do |item| %>
+    16:       <li>
+    17:         <%= link_to item.output, ingredient_path(item.ingredient.id) %>
+    18:       </li>
+    19:     <%end%>
+    20:   </ul>
+  
+app/views/recipes/show.html.erb:17:in `block in _app_views_recipes_show_html_erb___24606129236208922_69959002167280'
+app/views/recipes/show.html.erb:15:in `_app_views_recipes_show_html_erb___24606129236208922_69959002167280'
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:20:21 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2018-09-07 05:21:03 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (120.8ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_recipe_path' for #<#<Class:0x007f411451ed28>:0x007f4132655278>
+Did you mean?  edit_recipe_path):
+    27: 
+    28: 
+    29: <p><%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %></p>
+    30: <p><%= link_to 'Delete this recipe', delete_recipe_path(@recipe) %></p>
+    31: <p><%= link_to "Return to home page", root_path %></p>
+    32: <p><%= link_to 'Log out', signout_path, :method => :delete %></p>
+  
+app/views/recipes/show.html.erb:30:in `_app_views_recipes_show_html_erb___24606129236208922_69958997552760'
+Started GET "/ingredients/2" for 127.0.0.1 at 2018-09-07 05:22:53 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingredients_controller.rb:4
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/views/ingredients/_display.html.erb:4
+  Rendered ingredients/_display.html.erb (1.6ms)
+  Rendered ingredients/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2018-09-07 05:22:54 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:70
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/recipes/2" for 127.0.0.1 at 2018-09-07 05:22:57 -0400
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for RecipesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/recipes/2" for 127.0.0.1 at 2018-09-07 05:24:10 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:75
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 63ms (Views: 37.0ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/recipes/2" for 127.0.0.1 at 2018-09-07 05:24:14 -0400
+Processing by RecipesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rS24cMJDJ2lVb36Pba32zYFhWxT8aau3/g6C7AdSBNXb+B+Aj+G1LtadpH5fheRdYkB7ZJRx/xnbuoPIyfjdQQ==", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:75
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:68
+  [1m[36mRecipe Destroy (1.0ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/recipes_controller.rb:68
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:68
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-07 05:24:14 -0400
+Processing by StaticController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-09-07 05:24:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/recipes" for 127.0.0.1 at 2018-09-07 05:24:16 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/recipes/index.html.erb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 4]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 7]]
+  ↳ app/views/recipes/index.html.erb:28
+  Rendered recipes/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 1.2ms)
+
+
