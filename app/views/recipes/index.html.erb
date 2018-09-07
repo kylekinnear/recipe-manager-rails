@@ -33,3 +33,6 @@
   </tr>
   <%end%>
 </table>
+
+<p><%= link_to 'Your home', user_path(current_user) %></p>
+<p><%= link_to 'Log out', signout_path, :method => :delete %></p>
