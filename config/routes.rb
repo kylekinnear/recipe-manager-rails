@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   delete '/signout', to: 'sessions#destroy'
 
+  get '/auth/:provider/callback', to: 'sessions#create'
 
 end
