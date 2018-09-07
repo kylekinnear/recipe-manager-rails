@@ -33,6 +33,7 @@ class RecipesController < ApplicationController
         flash.now[:notice] = 'Unable to create recipe - ingredient items need a quantity and an ingredient'
         render :new and return
       end
+    end
     if @recipe.save
       redirect_to recipe_path(@recipe), notice: 'Successfully added the recipe'
     else

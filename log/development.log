@@ -10295,3 +10295,32 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/recipes/new" for 127.0.0.1 at 2018-09-07 07:52:37 -0400
+  
+SyntaxError (/home/kyle/code/projects/recipe-manager-rails/app/controllers/recipes_controller.rb:71: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/recipes_controller.rb:71: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for 127.0.0.1 at 2018-09-07 07:53:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 46ms (Views: 30.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2018-09-07 07:53:09 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (7.7ms)
+  Rendered recipes/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 47ms (Views: 25.6ms | ActiveRecord: 1.3ms)
+
+
