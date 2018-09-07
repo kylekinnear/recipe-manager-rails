@@ -7,8 +7,13 @@
 <%end%>
 
 <h2><%= "Welcome to Recipe Manager, " + @user.name %></h2>
-<div><%= link_to 'Your recipes', user_recipes_path(@user) %></div> <!-- this path is wrong, and anyway we want to build a (sortable?) table here -->
+<br>
+<div><%= link_to 'Your recipes', user_recipes_path(@user) %></div>
 <p><%= link_to 'Add a new recipe', new_recipe_path %></p>
+<br>
+<p>Your highest rated recipe is: <%= link_to @user.highest_rated.name, recipe_path(@user.highest_rated) %></p>
+<p>The recipe you've made the most is: <%= link_to @user.most_made.name, recipe_path(@user.most_made) %></p>
+<p>Your recipe that serves the most people is: <%= link_to @user.serves_most.name, recipe_path(@user.serves_most) %></p>
 <br>
 <p><%= link_to 'Edit your information', edit_user_path(@user) %></p>
 <p><%= link_to 'Log out', signout_path, :method => :delete %></p>

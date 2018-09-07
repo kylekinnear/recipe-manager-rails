@@ -8,7 +8,7 @@ class User < ApplicationRecord
   def highest_rated
     ranker = {}
     self.recipes.each do |r|
-      if r.rating != ""
+      if r.rating != nil
         ranker.store(r, r.rating)
       end
     end
@@ -18,7 +18,7 @@ class User < ApplicationRecord
   def most_made
     ranker = {}
     self.recipes.each do |r|
-      if r.makes != ""
+      if r.makes != nil
         ranker.store(r, r.makes)
       end
     end
@@ -28,7 +28,7 @@ class User < ApplicationRecord
   def serves_most
     ranker = {}
     self.recipes.each do |r|
-      if r.serves != ""
+      if r.serves != nil
         ranker.store(r, r.serves)
       end
     end
