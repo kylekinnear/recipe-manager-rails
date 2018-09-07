@@ -4997,3 +4997,135 @@ Processing by RecipesController#new as HTML
 Completed 200 OK in 55ms (Views: 31.3ms | ActiveRecord: 1.5ms)
 
 
+Started POST "/recipes" for 127.0.0.1 at 2018-09-07 01:42:21 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q7b+109lTP00QCUEwvVG91pqfioybpInw/y2y7sxwcPdY1knAsfeurey//Xw3VRnuUteWlp2xonmSLfvdZsYVw==", "recipe"=>{"name"=>"Fried Eggs", "items_attributes"=>{"0"=>{"quantity"=>"2", "unit"=>"", "ingredient_name"=>"Eggs"}, "1"=>{"quantity"=>"1", "unit"=>"slice", "ingredient_name"=>"butter"}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"4", "makes"=>"2", "serves"=>"1", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "egg"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/item.rb:12
+  [1m[36mIngredient Create (2.7ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "egg"], ["created_at", "2018-09-07 05:42:21.295614"], ["updated_at", "2018-09-07 05:42:21.295614"]]
+  ↳ app/models/item.rb:12
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/item.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:14
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "rating", "makes", "comments", "serves", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fried Eggs"], ["rating", 4], ["makes", 2], ["comments", ""], ["serves", 1], ["user_id", 1], ["created_at", "2018-09-07 05:42:21.319292"], ["updated_at", "2018-09-07 05:42:21.319292"]]
+  ↳ app/models/item.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("ingredient_id", "recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ingredient_id", 5], ["recipe_id", 3], ["quantity", "2"], ["unit", ""], ["ingredient_name", "Eggs"], ["created_at", "2018-09-07 05:42:21.322583"], ["updated_at", "2018-09-07 05:42:21.322583"]]
+  ↳ app/models/item.rb:14
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 3], ["quantity", "1"], ["unit", "slice"], ["ingredient_name", "butter"], ["created_at", "2018-09-07 05:42:21.324245"], ["updated_at", "2018-09-07 05:42:21.324245"]]
+  ↳ app/models/item.rb:14
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 3], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-09-07 05:42:21.328321"], ["updated_at", "2018-09-07 05:42:21.328321"]]
+  ↳ app/models/item.rb:14
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 3], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-09-07 05:42:21.329294"], ["updated_at", "2018-09-07 05:42:21.329294"]]
+  ↳ app/models/item.rb:14
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("recipe_id", "quantity", "unit", "ingredient_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 3], ["quantity", ""], ["unit", ""], ["ingredient_name", ""], ["created_at", "2018-09-07 05:42:21.329905"], ["updated_at", "2018-09-07 05:42:21.329905"]]
+  ↳ app/models/item.rb:14
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "butter"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/item.rb:12
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "butter"], ["created_at", "2018-09-07 05:42:21.335710"], ["updated_at", "2018-09-07 05:42:21.335710"]]
+  ↳ app/models/item.rb:12
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/item.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "ingredient_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["ingredient_id", 6], ["updated_at", "2018-09-07 05:42:21.342760"], ["id", 12]]
+  ↳ app/models/item.rb:14
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/item.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "ingredient_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["ingredient_id", 4], ["updated_at", "2018-09-07 05:42:21.352863"], ["id", 13]]
+  ↳ app/models/item.rb:14
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/item.rb:12
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "ingredient_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["ingredient_id", 4], ["updated_at", "2018-09-07 05:42:21.365859"], ["id", 14]]
+  ↳ app/models/item.rb:14
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/item.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "ingredient_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["ingredient_id", 4], ["updated_at", "2018-09-07 05:42:21.376998"], ["id", 15]]
+  ↳ app/models/item.rb:14
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/item.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:33
+Redirected to http://localhost:3000/recipes/3
+Completed 302 Found in 139ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/recipes/3" for 127.0.0.1 at 2018-09-07 01:42:21 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:54
+  Rendering recipes/show.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/views/recipes/show.html.erb:15
+  Rendered recipes/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-09-07 01:42:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/recipes" for 127.0.0.1 at 2018-09-07 01:42:28 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/recipes/index.html.erb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/views/recipes/index.html.erb:28
+  Rendered recipes/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ingredients"[0m
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
