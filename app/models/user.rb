@@ -4,4 +4,5 @@ class User < ApplicationRecord
 
   has_many :recipes
   #has_many :ingredients, :through => :recipes #does this work, since we're skipping items?
+
 end
