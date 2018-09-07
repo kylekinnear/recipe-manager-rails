@@ -3,6 +3,8 @@ class Item < ApplicationRecord
 #  belongs_to :ingredient
   belongs_to :recipe
 
+  validate :is_valid_or_blank?
+
   def output
     self.quantity.to_s + " " + self.unit + " " + self.ingredient_name
   end
@@ -15,12 +17,10 @@ class Item < ApplicationRecord
     end
   end
 
-  def has_ingredient_name? #used to make sure the first ingredient in a recipe includes a letter
-    !!(self.ingredient_name =~ /[a-zA-Z]/)
-  end
-
   def is_valid_or_blank? #used to make sure an item has a name and quantity or is an empty placeholder
-    (self.ingredient_name.size > 0 && self.quantity.size > 0) || ( self.ingredient_name == "" && self.quantity == "" && self.unit == "")
+    unless (self.ingredient_name.size > 0 && self.quantity.size > 0) || ( self.ingredient_name == "" && self.quantity == "" && self.unit == "")
+      errors.add(:ingredient_name, "Ingredients have both a quantity and a name or are completely blank")
+    end
   end
 
 end
