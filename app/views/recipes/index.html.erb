@@ -33,6 +33,7 @@
   </tr>
   <%end%>
 </table>
-
-<p><%= link_to 'Your home', user_path(current_user) %></p>
+<br>
+<p><%= link_to 'Add a new recipe', new_recipe_path if @user %></p>
+<p><%= link_to "Return to home page", root_path %></p>
 <p><%= link_to 'Log out', signout_path, :method => :delete %></p>
