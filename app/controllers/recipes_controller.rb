@@ -26,8 +26,16 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
-    @recipe.items.each do |item|
-      item.find_or_create_ingredient
+    if @recipe.items.first.ingredient_name =~ /[a-zA-Z]/ #validation to check if the first ingredient includes a letter
+      @recipe.items.each do |item|
+        if (item.ingredient_name.size > 0 && item.quantity.size > 0) || ( item.ingredient_name == "" && item.quantity == "" && item.unit == "") #validate each ingredient item is blank or has a quantity and ingredient
+          item.find_or_create_ingredient
+        else
+          render :new, notice: 'Unable to create recipe - ingredient items need a quantity and an ingredient'
+        end
+      end
+    else
+      render :new, notice: 'Unable to create recipe - make sure to include at least one ingredient.'
     end
 #    binding.pry
     if @recipe.save
