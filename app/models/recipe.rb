@@ -6,4 +6,8 @@ class Recipe < ApplicationRecord
 
   has_many :ingredients, :through => :items
 
+  def has_name?
+    self.name != ""
+  end
+
 end
