@@ -1,0 +1,8 @@
+<h2><%= @ingredient.name.capitalize %></h2>
+
+<b>Used in:</b>
+<% @ingredient.recipes.each do |recipe| %>
+  <p><%= link_to recipe.name, recipe_path(recipe) %></p>
+<%end%>
+
+<p><%= link_to "Return to home page", root_path %></p>
