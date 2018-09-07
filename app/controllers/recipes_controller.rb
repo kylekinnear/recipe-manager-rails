@@ -26,9 +26,9 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
-    if @recipe.items.first.ingredient_name =~ /[a-zA-Z]/ #validation to check if the first ingredient includes a letter
+    if @recipe.items.first.has_ingredient_name? #recipes need at least 1 ingredient
       @recipe.items.each do |item|
-        if (item.ingredient_name.size > 0 && item.quantity.size > 0) || ( item.ingredient_name == "" && item.quantity == "" && item.unit == "") #validate each ingredient item is blank or has a quantity and ingredient
+        if item.is_valid_or_blank?
           item.find_or_create_ingredient
         else
           render :new, notice: 'Unable to create recipe - ingredient items need a quantity and an ingredient'
