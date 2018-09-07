@@ -6,9 +6,9 @@
   </div>
 <%end%>
 
-<h2><%= "Welcome, " + @user.name %></h2>
+<h2><%= "Welcome to Recipe Manager, " + @user.name %></h2>
 <div><%= link_to 'Your recipes', user_recipes_path(@user) %></div> <!-- this path is wrong, and anyway we want to build a (sortable?) table here -->
 <p><%= link_to 'Add a new recipe', new_recipe_path %></p>
 <br>
-<p><%= link_to 'Edit', edit_user_path(@user) %></p>
+<p><%= link_to 'Edit your information', edit_user_path(@user) %></p>
 <p><%= link_to 'Log out', signout_path, :method => :delete %></p>
