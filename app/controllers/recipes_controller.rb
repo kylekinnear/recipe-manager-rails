@@ -56,7 +56,7 @@ class RecipesController < ApplicationController
   end
 
   def update
-    if @recipe.has_name? && @recipe.items.first.has_ingredient_name? #recipes need these things
+    if params[:name] != nil
       if @recipe.update(recipe_params)
         redirect_to recipe_path(@recipe), notice: 'Recipe was successfully updated.'
       else
@@ -64,7 +64,7 @@ class RecipesController < ApplicationController
         render :edit
       end
     else
-      flash.now[:notice] = 'Unable to edit recipe. Check inputs'
+      flash.now[:notice] = 'Unable to edit recipe. Recipes need names'
       render :edit
     end
   end
