@@ -5663,3 +5663,150 @@ Completed 200 OK in 49ms (Views: 41.5ms | ActiveRecord: 2.3ms)
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+Started GET "/ingredients" for 127.0.0.1 at 2018-09-07 04:55:56 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering ingredients/index.html.erb within layouts/application
+  Rendered ingredients/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/kyle/code/projects/recipe-manager-rails/app/views/ingredients/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/kyle/code/projects/recipe-manager-rails/app/views/ingredients/index.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/ingredients/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/ingredients/index.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/ingredients" for 127.0.0.1 at 2018-09-07 04:56:15 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/ingredients/index.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/views/ingredients/index.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/views/ingredients/index.html.erb:13
+  Rendered ingredients/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 46ms (Views: 41.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-09-07 04:57:37 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/ingredients/index.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/views/ingredients/index.html.erb:14
+  Rendered ingredients/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/1" for 127.0.0.1 at 2018-09-07 04:57:48 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredients_controller.rb:4
+  Rendering ingredients/show.html.erb within layouts/application
+  Rendered ingredients/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-09-07 04:58:42 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/ingredients/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/views/ingredients/index.html.erb:14
+  Rendered ingredients/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-09-07 04:58:52 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/ingredients/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/views/ingredients/index.html.erb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/views/ingredients/index.html.erb:14
+  Rendered ingredients/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 2.0ms)
+
+

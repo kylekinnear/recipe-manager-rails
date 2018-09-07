@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message%></p>
+  </div>
+<%end%>
+
+<h2><%= @user.name + "'s Ingredients" if @user %></h2>
+<h2><%= "Ingredient Index" if !@user %></h2>
+
+  <% @ingredients.each do |ingredient| %>
+    <% if ingredient.name != "" %>
+      <p><%= link_to ingredient.name.capitalize + " is used in #{ingredient.recipes.size} recipes", ingredient_path(ingredient)%></p>
+    <%end%>
+  <%end%>
+<br>
+<%= link_to "Return to home page", root_path %>
