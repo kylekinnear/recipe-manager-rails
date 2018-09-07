@@ -8716,3 +8716,65 @@ Processing by RecipesController#index as HTML
 Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/recipes/most_used" for 127.0.0.1 at 2018-09-07 05:24:39 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"most_used"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:75
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=most_used):
+  
+app/controllers/recipes_controller.rb:75:in `set_recipe'
+Started GET "/ingredients/most_used" for 127.0.0.1 at 2018-09-07 05:24:52 -0400
+Processing by IngredientsController#most_used as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 38ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:24:52 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.7ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingredients_controller.rb:4
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/views/ingredients/_display.html.erb:4
+  Rendered ingredients/_display.html.erb (2.5ms)
+  Rendered ingredients/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 34.8ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ? ORDER BY "recipes"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ? ORDER BY "recipes"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ? ORDER BY "recipes"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
