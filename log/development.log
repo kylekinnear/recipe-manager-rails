@@ -5397,3 +5397,59 @@ Started POST "/recipes" for 127.0.0.1 at 2018-09-07 03:58:06 -0400
 SyntaxError (/home/kyle/code/projects/recipe-manager-rails/app/controllers/recipes_controller.rb:72: syntax error, unexpected end-of-input, expecting keyword_end):
   
 app/controllers/recipes_controller.rb:72: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/recipes" for 127.0.0.1 at 2018-09-07 03:58:52 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/recipes/index.html.erb:24
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 4]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  ↳ app/views/recipes/index.html.erb:28
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  ↳ app/views/recipes/index.html.erb:28
+  Rendered recipes/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 48ms (Views: 36.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-09-07 03:58:59 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gbh3ZHIQmbJf31sJ6zfPCeDyCn6GQ3B1FMvQljwqe1f3bdCUP7IL9dwtgfjZH92ZA9MqDu5bJNsxf9Gy8oCiww==", "recipe"=>{"name"=>"", "items_attributes"=>{"0"=>{"quantity"=>"23", "unit"=>"", "ingredient_name"=>""}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (11.1ms)
+  Rendered recipes/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-09-07 04:03:23 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O71XpAhG46i6MSThPDDkakNfqzpIGDqBlq/Uq4p74ylNaPBUReRx7znD/hAOGPb6oH6LSiAAbi+zG9WPRNE6vQ==", "recipe"=>{"name"=>"", "items_attributes"=>{"0"=>{"quantity"=>"23", "unit"=>"", "ingredient_name"=>""}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (18.4ms)
+  Rendered recipes/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 61ms (Views: 36.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2018-09-07 04:04:02 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8FINAY0EIa4Tj06GeAS4CwgFdrOe1gI/2QR0xZKGAGyGh6rxwKaz6ZB9lHdKLKqb6yRWw/bOVpH8sHXhXCzZ+A==", "recipe"=>{"name"=>"", "items_attributes"=>{"0"=>{"quantity"=>"23", "unit"=>"", "ingredient_name"=>""}, "1"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "2"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "3"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}, "4"=>{"quantity"=>"", "unit"=>"", "ingredient_name"=>""}}, "rating"=>"", "makes"=>"", "serves"=>"", "comments"=>""}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering recipes/new.html.erb within layouts/application
+  Rendered recipes/_form.html.erb (9.1ms)
+  Rendered recipes/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 56ms (Views: 29.6ms | ActiveRecord: 1.6ms)
+
+
