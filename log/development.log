@@ -6133,3 +6133,2239 @@ Processing by RecipesController#new as HTML
 Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/ingredients/most_used" for 127.0.0.1 at 2018-09-07 05:07:28 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"most_used"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/ingredients_controller.rb:4
+Completed 404 Not Found in 8ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Ingredient with 'id'=most_used):
+  
+app/controllers/ingredients_controller.rb:4:in `show'
+Started GET "/ingredients/most_used" for 127.0.0.1 at 2018-09-07 05:10:39 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"most_used"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 43ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 15ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 16ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 16ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 18ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 16ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 16ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 15ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 17ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:40 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 18ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 15ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 24ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 17ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 17ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 15ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 15ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 23ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (3.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 16ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 17ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 13ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:16 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredients/most_used" for 127.0.0.1 at 2018-09-07 05:11:57 -0400
+Processing by IngredientsController#most_used as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/models/ingredient.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  ↳ app/models/ingredient.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" INNER JOIN "items" ON "recipes"."id" = "items"."recipe_id" WHERE "items"."ingredient_id" = ?[0m  [["ingredient_id", 9]]
+  ↳ app/models/ingredient.rb:9
+Redirected to http://localhost:3000/ingredients/3
+Completed 302 Found in 43ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:11:57 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingredients_controller.rb:4
+  Rendering ingredients/show.html.erb within layouts/application
+  Rendered ingredients/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ingredients/3" for 127.0.0.1 at 2018-09-07 05:12:08 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingredients_controller.rb:4
+  Rendering ingredients/show.html.erb within layouts/application
+  Rendered ingredients/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ingredients/2" for 127.0.0.1 at 2018-09-07 05:12:10 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingredients_controller.rb:4
+  Rendering ingredients/show.html.erb within layouts/application
+  Rendered ingredients/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+

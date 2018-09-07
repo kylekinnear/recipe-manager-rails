@@ -2,8 +2,6 @@ class IngredientsController < ApplicationController
 
   def show
     @ingredient = Ingredient.find(params[:id])
-    @message = params[:message] if params[:message]
-    @message ||= false
   end
 
   def index
