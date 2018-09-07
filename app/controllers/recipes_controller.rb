@@ -31,11 +31,11 @@ class RecipesController < ApplicationController
         if item.is_valid_or_blank?
           item.find_or_create_ingredient
         else
-          render :new, notice: 'Unable to create recipe - ingredient items need a quantity and an ingredient'
+          render :new, notice: 'Unable to create recipe - ingredient items need a quantity and an ingredient' and return
         end
       end
     else
-      render :new, notice: 'Unable to create recipe - make sure to include at least one ingredient.'
+      render :new, notice: 'Unable to create recipe - make sure to include at least one ingredient.' and return
     end
 #    binding.pry
     if @recipe.save

@@ -16,11 +16,11 @@ class Item < ApplicationRecord
   end
 
   def has_ingredient_name? #used to make sure the first ingredient in a recipe includes a letter
-    self.ingredient_name =~ /[a-zA-Z]/
+    !!(self.ingredient_name =~ /[a-zA-Z]/)
   end
 
   def is_valid_or_blank? #used to make sure an item has a name and quantity or is an empty placeholder
     (self.ingredient_name.size > 0 && self.quantity.size > 0) || ( self.ingredient_name == "" && self.quantity == "" && self.unit == "")
   end
-  
+
 end
