@@ -2,8 +2,10 @@ require 'securerandom'
 
 class User < ApplicationRecord
 
-  validates :email, presence: true
-  validates :email, uniqueness: true
+  #validates :email, presence: true
+  #validates :email, uniqueness: true
+  validates :name, presence: true
+  validates :name, uniqueness: true
   validates :password, presence: true
 
   has_secure_password
@@ -12,8 +14,7 @@ class User < ApplicationRecord
   #has_many :ingredients, :through => :recipes #does this work, since we're skipping items?
 
   def self.find_or_create_by_omniauth(auth_hash)
-    self.where(:email => auth_hash["info"]["email"]).first_or_create do |user|
-      user.name = auth_hash["info"]["name"]
+    self.where(:name => auth_hash["info"]["nickname"]).first_or_create do |user|
       user.password = SecureRandom.hex
     end
   end

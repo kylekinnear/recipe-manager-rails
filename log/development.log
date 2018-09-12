@@ -11099,3 +11099,145 @@ Processing by StaticController#home as HTML
 Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-12 10:57:39 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 349ms (Views: 343.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-09-12 10:57:46 -0400
+Started GET "/auth/github" for 127.0.0.1 at 2018-09-12 10:57:47 -0400
+Started GET "/auth/github/callback?code=5bcdcd7fc236b440f246&state=4be2fa39a122dd576fa0de1fd8cfd3ab5f05a7af610cbc4f" for 127.0.0.1 at 2018-09-12 10:57:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"5bcdcd7fc236b440f246", "state"=>"4be2fa39a122dd576fa0de1fd8cfd3ab5f05a7af610cbc4f", "provider"=>"github"}
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:15
+Redirected to http://localhost:3000/
+Completed 302 Found in 233ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 10:57:48 -0400
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 10:58:54 -0400
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+Started GET "/auth/github" for 127.0.0.1 at 2018-09-12 10:59:05 -0400
+  Rendered static/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 10:59:30 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 156ms (Views: 150.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-09-12 10:59:32 -0400
+Started GET "/auth/github" for 127.0.0.1 at 2018-09-12 10:59:33 -0400
+Started GET "/auth/github/callback?code=00c806642d18e6037676&state=2ecf9e1489b212d96480b084cb9b766d4f1f1dce62c78ccf" for 127.0.0.1 at 2018-09-12 10:59:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"00c806642d18e6037676", "state"=>"2ecf9e1489b212d96480b084cb9b766d4f1f1dce62c78ccf", "provider"=>"github"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "kylekinnear"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:17
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "kylekinnear"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[36mUser Create (20.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "kylekinnear"], ["password_digest", "$2a$10$Odpe/u8t016o42tFzQf5P.CxvsJX62MCQRPYiEYN4uz6t3r1GyQGS"], ["created_at", "2018-09-12 15:02:34.864125"], ["updated_at", "2018-09-12 15:02:34.864125"]]
+  ↳ app/models/user.rb:17
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 180988ms (ActiveRecord: 27.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 11:02:51 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/kyle/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 37ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-09-12 11:02:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/show.html.erb within layouts/application (114.6ms)
+Completed 200 OK in 306ms (Views: 302.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-09-12 11:02:55 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PMmQVwD54T99dXSvcISKq/BkXEkIZDxrQW5L3j2zWmmsxmDzBW0miVjMKi4WKnCh8sXGohFynv5vJmK68bjoTg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 11:02:56 -0400
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2018-09-12 11:02:56 -0400
+Started GET "/auth/github" for 127.0.0.1 at 2018-09-12 11:02:57 -0400
+Started GET "/auth/github/callback?code=d69885f23176e11073c2&state=c318e38be9375fff58ce0d559906823d3ee3692a08463373" for 127.0.0.1 at 2018-09-12 11:02:57 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"d69885f23176e11073c2", "state"=>"c318e38be9375fff58ce0d559906823d3ee3692a08463373", "provider"=>"github"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "kylekinnear"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-12 11:02:58 -0400
+Processing by StaticController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-09-12 11:02:58 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.5ms)
+
+
