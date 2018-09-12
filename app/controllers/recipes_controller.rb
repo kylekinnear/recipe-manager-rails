@@ -1,4 +1,3 @@
-require 'pry'
 require 'active_support/inflector'
 
 class RecipesController < ApplicationController
@@ -26,7 +25,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
-    binding.pry
     @recipe.items.each do |item|
       if item.is_valid_or_blank?
         item.find_or_create_ingredient
