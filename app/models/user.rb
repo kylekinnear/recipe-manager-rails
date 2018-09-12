@@ -23,7 +23,11 @@ class User < ApplicationRecord
         ranker.store(r, r.rating)
       end
     end
-    ranker.max_by{|k,v| v}[0]
+    if ranker.size > 0
+      ranker.max_by{|k,v| v}[0]
+    else
+      return nil
+    end
   end
 
   def most_made
@@ -33,7 +37,11 @@ class User < ApplicationRecord
         ranker.store(r, r.makes)
       end
     end
-    ranker.max_by{|k,v| v}[0]
+    if ranker.size > 0
+      ranker.max_by{|k,v| v}[0]
+    else
+      return nil
+    end
   end
 
   def serves_most
@@ -43,7 +51,11 @@ class User < ApplicationRecord
         ranker.store(r, r.serves)
       end
     end
-    ranker.max_by{|k,v| v}[0]
+    if ranker.size > 0
+      ranker.max_by{|k,v| v}[0]
+    else
+      return nil
+    end
   end
 
 end

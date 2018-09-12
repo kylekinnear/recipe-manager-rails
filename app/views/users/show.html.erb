@@ -12,9 +12,15 @@
 <p><%= link_to 'Add a new recipe', new_recipe_path %></p>
 <% if @user.recipes.size > 0 %>
 <br>
+<% if @user.highest_rated != nil %>
 <p>Your highest rated recipe is: <%= link_to @user.highest_rated.name, recipe_path(@user.highest_rated) %> (<%= @user.highest_rated.rating %>)</p>
+<%end%>
+<% if @user.most_made != nil %>
 <p>The recipe you've made the most is: <%= link_to @user.most_made.name, recipe_path(@user.most_made) %> (<%= @user.most_made.makes %>)</p>
+<%end%>
+<% if @user.serves_most != nil %>
 <p>Your recipe that serves the most people is: <%= link_to @user.serves_most.name, recipe_path(@user.serves_most) %> (<%= @user.serves_most.serves %>)</p>
+<%end%>
 <%end%>
 <br>
 <p><%= link_to 'Edit your information', edit_user_path(@user) %></p>
