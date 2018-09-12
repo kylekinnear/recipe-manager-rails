@@ -26,8 +26,9 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
+    binding.pry
     @recipe.items.each do |item|
-      if item.valid?
+      if item.is_valid_or_blank?
         item.find_or_create_ingredient
       else
         flash.now[:notice] = 'Unable to create recipe - ingredient items need a quantity and an ingredient'

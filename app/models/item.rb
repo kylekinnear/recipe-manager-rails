@@ -1,6 +1,5 @@
 class Item < ApplicationRecord
-  attr_accessor :ingredient
-#  belongs_to :ingredient
+  belongs_to :ingredient
   belongs_to :recipe
 
   validate :is_valid_or_blank?
@@ -18,7 +17,9 @@ class Item < ApplicationRecord
   end
 
   def is_valid_or_blank? #used to make sure an item has a name and quantity or is an empty placeholder
-    unless (self.ingredient_name.size > 0 && self.quantity.size > 0) || ( self.ingredient_name == "" && self.quantity == "" && self.unit == "")
+    if (self.ingredient_name.size > 0 && self.quantity.size > 0) || ( self.ingredient_name == "" && self.quantity == "" && self.unit == "")
+      return true
+    else
       errors.add(:ingredient_name, "Ingredients have both a quantity and a name or are completely blank")
     end
   end
