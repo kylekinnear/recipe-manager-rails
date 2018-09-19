@@ -20,4 +20,8 @@ class Recipe < ApplicationRecord
     end
   end
 
+  def self.highest_rated
+    order(:rating).first
+  end
+
 end

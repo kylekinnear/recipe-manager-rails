@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message%></p>
+  </div>
+<%end%>
+
+<h1>The Highest Rated Recipe is:</h1>
+<h2><%= @recipe.name %></h2>
+
+
+
+<p>Rating: <%= @recipe.rating %></p>
+
+<p><i>Comments:</i>
+<%= @recipe.comments %></p>
+
+
+
+<p><%= link_to "Return to home page", root_path %></p>
+<p><%= link_to 'Log out', signout_path, :method => :delete %></p>

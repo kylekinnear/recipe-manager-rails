@@ -58,6 +58,11 @@ class RecipesController < ApplicationController
     redirect_to root_path, notice: 'Recipe was successfully deleted.'
   end
 
+  def highest_rated
+    @recipe = Recipe.highest_rated
+    #redirect_to recipe_path(@recipe)
+  end
+
   private
 
   def set_recipe

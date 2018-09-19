@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   get 'ingredients/most_used', to: 'ingredients#most_used'
+  get 'recipes/highest_rated', to: 'recipes#highest_rated'
 
   resources :ingredients, only: [:show, :index]
   resources :recipes

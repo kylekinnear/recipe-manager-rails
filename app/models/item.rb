@@ -5,7 +5,11 @@ class Item < ApplicationRecord
   validate :is_valid_or_blank?
 
   def output
-    self.quantity.to_s + " " + self.unit + " " + self.ingredient_name
+    if !self.unit.nil?
+      self.quantity.to_s + " " + self.unit + " " + self.ingredient_name
+    else
+      self.quantity.to_s + " " + self.ingredient_name if self.unit.nil?
+    end
   end
 
   def find_or_create_ingredient
